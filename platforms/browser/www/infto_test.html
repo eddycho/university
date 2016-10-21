@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <style>
+  #pic-univ {
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    -webkit-transition-property: width;
+    -webkit-transition-duration: 3s;
+  }
+  .small {
+    width:30%;
+  }
+  .large {
+    width:100%;
+  }
+  .clear_both {
+    clear: both;
+  }
+  .bold-style {
+    font-weight: :bold;
+    color: #950000;
+  }
+  </style>
+</head>
+<body>
+  <div>
+    <h1><strong class="bold-style">시대정신</strong>을 선도하는 열린 학문 공동체 입니다.</h1>
+    <img src="/images/1111.png" class="small" id="pic-univ">
+    <div class="clear_both">
+      <p>안녕하십니까?????안녕하십니까?????안녕하십니까?????안녕하십니까?????안녕하십니까?????안녕하십니까?????안녕하십니까?????안녕하십니까?????안녕하십니까?????안녕하십니까?????안녕하십니까?????안녕하십니까?????안녕하십니까?????
+      </p>
+      <p>총장 OOOOOOOO</p>
+    </div>
+  </div>
+
+  <script>
+  $(document).ready(function() {
+    var picUniv = $("#pic-univ");
+    picUniv.data("flag","false");
+      picUniv.click(function() {
+      var bFlag = picUniv.data("flag");
+      if (bFlag == "false") {
+        bFlag = "true";
+        picUniv.removeClass("small");
+        picUniv.addClass("large");
+      } else {
+        bFlag = "false";
+        picUniv.removeClass("large");
+        picUniv.addClass("small");
+      }
+      picUniv.data("flag",bFlag);
+    });
+  });
+  </script>
+</body>
+</html>

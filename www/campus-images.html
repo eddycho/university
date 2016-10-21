@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+    <link rel="stylesheet" href="./jquery.mobile/jquery.mobile-1.4.5.css" />
+    <script src="./jquery.mobile/demos/js/jquery.js"></script>
+    <script src="./jquery.mobile/jquery.mobile-1.4.5.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link href="/fotorama-4.6.4/fotorama.css" rel="stylesheet">
+    <script src="/fotorama-4.6.4/fotorama.js"></script>
+    <style>
+    .fotorama-cation {
+      text-align: center;
+    }
+    </style>
+    <title>University</title>
+</head>
+
+<body>
+<div data-role="page" id="campus-images">
+    <div data-role="header" data-theme="b" data-position="fixed">
+      <a href="#" data-icon="back">Back</a>
+      <a href="index.html" data-icon="home" data-iconpos="notext">홈</a>
+      <h2 id="logo">하버드대학교</h2>
+      <div data-role="navbar">
+        <ul>
+          <li><a href="#" class="ui-btn-active">상단1</a></li>
+          <li><a href="#">상단2</a></li>
+          <li><a href="#">상단3</a></li>
+          <li><a href="#">상단4</a></li>
+          <li><a href="#">상단5</a></li>
+        </ul>
+      </div>
+    </div>
+    <div data-role="content">
+      <div class="fotorama" data-arrows="true" data-width="100%" data-ratio="965/643"
+      data-allowfullscreen="true" data-nav="thumbs">
+      <img src="/images/1111.png" data-caption="호수공원"/>
+      <img src="/images/2222.png" data-caption="자유관"/>
+      <img src="/images/3333.png" data-caption="성실관"/>
+      <img src="/images/4444.png" data-caption="학생회관"/>
+      <img src="/images/5555.png" data-caption="자유관앞조형물"/>
+      <img src="/images/6666.png" data-caption="본관"/>
+      <img src="/images/7777.png" data-caption="채플관"/>
+    </div>
+    </div>
+    <div data-role="footer" data-position="fixed">
+      <div data-role="navbar">
+        <ul>
+          <li><a href="#" class="ui-btn-active" data-icon="gear">하단1</a></li>
+          <li><a href="#" data-icon="grid">하단2</a></li>
+          <li><a href="#" data-icon="search">하단3</a></li>
+          <li><a href="#" data-icon="info">하단4</a></li>
+        </ul>
+      </div>
+    </div>
+</div>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript">
+        app.initialize();
+    </script>
+</body>
+
+</html>intro

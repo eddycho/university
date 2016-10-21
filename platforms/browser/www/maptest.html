@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" href="./jquery.mobile/jquery.mobile-1.4.5.css" />
+  <script src="./jquery.mobile/demos/js/jquery.js"></script>
+  <script src="./jquery.mobile/jquery.mobile-1.4.5.js"></script>
+  <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+  <script src="/jquery-ui-map/ui/min/jquery.ui.map.full.min.js"></script>
+  <script src="/jquery-ui-map/ui/jquery.ui.map.extensions.js"></script>
+  <!-- If you'd like to support IE8 -->
+  <style>
+  #video_canvas {
+    margin-top: 0px;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-left: auto;
+    width: 320px;
+    height: 240px;
+  }
+  .content_style {
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+  .header {
+    height: 30px;
+  }
+  .map_style {
+    padding: 0px;
+    height: 100%;
+    width: 100%;
+  }
+  </style>
+</head>
+<body>
+<div data-role="page" id="video_value" data-add-back-btn="true" class="map_style">
+    <div data-role="header" data-position="fixed" data-fullscreen="true" data-theme="b">
+    <a href="index.html" rel="external" data-icon="hoem" data-direction="reverse">Home</a>
+    <h1 class="header">캠퍼스 맵</a>
+  </div>
+  <div data-role="content" class="map_style">
+    <div id="map_canvas" class="map_style"></div>
+  </div>
+  <div data-role="footer" data-position="fixed" data-theme="b">
+    <div data-role="navbar">
+      <ul>
+        <li><a href="#" data-icon="search" id="current_location">현위치 찾기</a></li>
+        <li><a href="#" data-icon="grid" id="put_pin" value="1111">핀놓기</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<script>
+$(document).ready(function() {
+  var startLatLng = new google.maps.LatLng(42.3768191,-71.1169798);
+  $('#map_canvas').gmap({"center": startLatLng , "zoom":16});
+  $('#current_location').click(function() {
+
+    navigator.geolocation.getCurrentPosition(setPostion, returnError);
+    function returnError(e) { alert("현위치를 찾을수 없습니다.11");}
+    function setPostion(postion) {
+    $('#map_canvas').gmap("getCurrentPosition", function(position,status) {
+//      if (status == "OK") {
+        var latlng = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
+        var markerBlue = "https://www.google.com/intl/en_us/mapfiles/ms/icons/blue-dot.png";
+        $('#map_canvas').gmap("get","map").panTo(latlng);
+        $('#map_canvas').gmap("addMarker",{"position": latlng , "icon" : markerBlue});
+//      } else {
+//        alert("현위치를 찾을수 없습니다.");
+//      }
+    });
+  }
+  });
+
+
+  $('#put_pin').click(
+     function() {
+     var startLatLng = new google.maps.LatLng(42.3768191,-71.1169798);
+     //alert(startLatLng);
+     var markerRed = "https://www.google.com/intl/en_us/mapfiles/ms/icons/red-dot.png";
+     $('#map_canvas').gmap("get","map").panTo(startLatLng);
+     $('#map_canvas').gmap("addMarker",{"position":startLatLng , "icon" :markerRed}).click(function() {
+       $('#map_canvas').gmap("openInfoWindow",{"content": "하버드대학교 도서관"}, this);
+     });
+  });
+});
+</script>
+
+</body>
+</html>

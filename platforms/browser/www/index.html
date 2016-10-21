@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+    <link rel="stylesheet" href="./jquery.mobile/jquery.mobile-1.4.5.css" />
+    <script src="./jquery.mobile/demos/js/jquery.js"></script>
+    <script src="./jquery.mobile/jquery.mobile-1.4.5.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link href="/fotorama-4.6.4/fotorama.css" rel="stylesheet">
+    <script src="/fotorama-4.6.4/fotorama.js"></script>
+    <style>
+    #logo {
+      width:276px;
+      height:75px;
+      text-indent: -9999px;
+      background-image: url(/images/Harvard_University.jpg);
+      background-repeat: no-repeat;
+      margin-top: 0px;
+      margin-right: auto;
+      margin-bottom: 10px;
+      margin-left: auto;
+    }
+    .title-style {
+      color:#3f3c30;
+      padding-top: 10px;
+    }
+    .fotorama-cation {
+      text-align: center;
+    }
+    #pic_univ {
+      float: left;
+      margin-right: 10px;
+      margin-bottom: 10px;
+      -webkit-transition-property: width;
+      -webkit-transition-duration: 2s;
+    }
+    .small {
+      width:30%;
+    }
+    .large {
+      width:100%;
+    }
+    .clear_both {
+      clear: both;
+    }
+    .bold-style {
+      font-weight: :bold;
+      color: #950000;
+    }
+    .header {
+      height: 30px;
+    }
+    </style>
+    <title>University</title>
+</head>
+
+<body>
+<div data-role="page" id="main">
+    <div data-role="header" data-theme="b">
+      <h2 id="logo">하버드대학교</h2>
+    </div>
+    <div data-role="content">
+      <ul data-role="listview" data-inset="true">
+        <li><a href="#campus-images">
+          <img src="/images/pic_i.png" alt="" class="ui-li-thumb" />
+          <h3 class="title-style">캠퍼스이미지</h3></a>
+        </li>
+        <li><a href="#intro">
+            <img src="/images/intro_i.png" alt="" class="ui-li-thumb" />
+            <h3 class="title-style">대학교소개</h3></a>
+        </li>
+        <li><a href="videotest.html">
+            <img src="/images/movie_i.png" alt="" class="ui-li-thumb" />
+            <h3 class="title-style">홍보동영상</h3></a>
+        </li>
+        <li><a href="maptest.html" rel="external">
+            <img src="/images/map_i.png" alt="" class="ui-li-thumb" />
+            <h3 class="title-style">캠퍼스맵</h3></a>
+        </li>
+      </ul>
+    </div>
+</div>
+<div data-role="page" id="campus-images" clas="gallery-page">
+  <div data-role="header">
+    <a href="#main" data-icon="home" data-direction="reverse" class="ui-btn-left">Home</a>
+    <h1 class="header">캠퍼스 이미지</h1>
+  </div>
+  <div data-role="content">
+    <div class="fotorama" data-arrows="true" data-width="100%" data-ratio="965/643" data-allowfullscreen="true" data-nav="thumbs">
+    <img src="/images/1111.png" data-caption="호수공원"/>
+    <img src="/images/2222.png" data-caption="자유관"/>
+    <img src="/images/3333.png" data-caption="성실관"/>
+    <img src="/images/4444.png" data-caption="학생회관"/>
+    <img src="/images/5555.png" data-caption="자유관앞조형물"/>
+    <img src="/images/6666.png" data-caption="본관"/>
+    <img src="/images/7777.png" data-caption="채플관"/>
+    </div>
+  </div>
+  <div data-role="footer">
+    <h2>하버드대학교</h2>
+  </div>
+</div>
+<div data-role="page" id="intro">
+  <div data-role="header" data-theme="b">
+    <a href="#main" data-icon="home" data-direction="reverse" class="ui-btn-left">Home</a>
+    <h1 class="header">대학교 소개</h1>
+  </div>
+  <div data-role="content" data-theme="c">
+    <img class="small" id="pic_univ" src="/images/1111.png" alt="">
+    <h2>"<strong class="bold-style">시대정신</strong>을 선도하는 열림<strong class="bold-style">학문 공도체</strong>입니다."</h2>
+  </div>
+  <div class="clear_both"></div>
+  <p>안녕하십니까?버추얼 대학교에 관심을 가져주셔서 감사합니다.안녕하십니까?버추얼 대학교에 관심을 가져주셔서 감사합니다.안녕하십니까?버추얼 대학교에 관심을 가져주셔서 감사합니다.안녕하십니까?버추얼 대학교에 관심을 가져주셔서 감사합니다.안녕하십니까?버추얼 대학교에 관심을 가져주셔서 감사합니다.안녕하십니까?버추얼 대학교에 관심을 가져주셔서 감사합니다.안녕하십니까?버추얼 대학교에 관심을 가져주셔서 감사합니다.안녕하십니까?버추얼 대학교에 관심을 가져주셔서 감사합니다.안녕하십니까?버추얼 대학교에 관심을 가져주셔서 감사합니다.안녕하십니까?버추얼 대학교에 관심을 가져주셔서 감사합니다.안녕하십니까?버추얼 대학교에 관심을 가져주셔서 감사합니다.안녕하십니까?버추얼 대학교에 관심을 가져주셔서 감사합니다.안녕하십니까?버추얼 대학교에 관심을 가져주셔서 감사합니다.
+  </p>
+  <p>여러분의 미래를 버추렁 대학교에서 함께하길 희망합니다.</p>
+  <p>총장 Luke Andrew</p>
+  <div data-role="footer">
+    <h2>하버드대학교</h2>
+  </div>
+</div>
+<script>
+$(document).ready(function() {
+  var picUniv = $("#pic_univ");
+  picUniv.data("flag","false");
+    picUniv.click(function() {
+    var bFlag = picUniv.data("flag");
+    if (bFlag == "false") {
+      bFlag = "true";
+      picUniv.removeClass("small");
+      picUniv.addClass("large");
+    } else {
+      bFlag = "false";
+      picUniv.removeClass("large");
+      picUniv.addClass("small");
+    }
+    picUniv.data("flag",bFlag);
+  });
+});
+</script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript">
+        app.initialize();
+    </script>
+
+</body>
+
+</html>
